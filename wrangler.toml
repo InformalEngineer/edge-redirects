@@ -1,0 +1,21 @@
+name = "meshaelr-redirects"
+main = "src/worker.js"
+compatibility_date = "2026-07-06"
+
+# Routes cover apex + www on meshaelr.com. The worker only intercepts traffic
+# that is proxied through Cloudflare; while DNS still points at the Ghost
+# droplet (proxied), log-only mode passes everything through untouched.
+routes = [
+  { pattern = "meshaelr.com/*", zone_name = "meshaelr.com" },
+  { pattern = "www.meshaelr.com/*", zone_name = "meshaelr.com" },
+]
+
+[vars]
+# "log" = compute + log the verdict, pass through to origin (current state).
+# "enforce" = actually 301/410. Flip via PR at cutover (04-migration §6.6).
+MODE = "log"
+
+# Persist logs in the Cloudflare dashboard (Workers & Pages > meshaelr-redirects
+# > Logs), so mapping validation doesn't require a live `wrangler tail`.
+[observability]
+enabled = true

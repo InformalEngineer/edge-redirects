@@ -1,0 +1,14 @@
+{
+  "name": "edge-redirects",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Permanent 301 map for meshaelr.com as a Cloudflare Worker",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail meshaelr-redirects",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^4.107.0"
+  }
+}

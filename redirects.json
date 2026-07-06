@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "source": "04-migration-meshaelr.md §2, Ghost export 2026-07-05",
+  "comment": "Every published meshaelr.com URL 301s somewhere sensible, forever (Principle 1: no link dies). PR-reviewed like code. The 'note' fields are documentation, the worker ignores them.",
+  "defaultTarget": "https://meshrahman.com/",
+  "rules": [
+    { "from": "/", "to": "https://meshrahman.com/", "status": 301, "note": "Domain-level 301, home replaced" },
+    { "from": "/about", "to": "https://meshrahman.com/about", "status": 301, "note": "Rewritten as chapters (01-PRD §6)" },
+    { "from": "/how-to-budget-your-money-in-7-easy-steps", "to": "https://meshrahman.com/essays/my-budgeting-system", "status": 301, "note": "Rewrite & migrate" },
+    { "from": "/28-ways-to-save-money-fast", "to": "https://meshrahman.com/essays/my-budgeting-system", "status": 301, "note": "Consolidated into budgeting essay" },
+    { "from": "/4-simple-ways-to-get-rid-of-debt-forever", "to": "https://meshrahman.com/essays/debt-and-the-mortgage-lever", "status": 301, "note": "Rewrite & migrate" },
+    { "from": "/options-fundamentals-for-beginners", "to": "https://meshrahman.com/essays", "status": 301, "note": "CONDITIONAL: if GSC shows meaningful traffic, promote to /essays/options-fundamentals (04-migration §2). Defaulting to /essays until the 12-month GSC pull says otherwise." },
+    { "from": "/increase-your-luck-in-6-easy-steps", "to": "https://meshrahman.com/essays/manufacturing-luck", "status": 301, "note": "Rewrite & migrate" },
+    { "from": "/building-a-daily-writing-habit", "to": "https://meshrahman.com/essays/daily-writing-habit", "status": 301, "note": "Rewrite & migrate" },
+    { "from": "/get-rid-of-meetings", "to": "https://meshrahman.com/essays/meetings-are-a-tax", "status": 301, "note": "Rewrite & migrate" },
+    { "from": "/mouth-taping", "to": "https://meshrahman.com/essays/mouth-taping-16-months", "status": 301, "note": "Migrate, light edit" },
+    { "from": "/amazon-fba-honest-review-of-selling-on-amazon-for-3-months", "to": "https://meshrahman.com/essays/amazon-fba-retrospective", "status": 301, "note": "Rewrite & migrate" },
+    { "from": "/how-to-build-a-website-using-ghost-cloudflare-and-digital-ocean", "to": "https://informalengineer.com/guides/ghost-cloudflare-digitalocean", "status": 301, "note": "Likely the most-linked URL. Refresh & migrate" },
+    { "from": "/how-to-supercharge-your-coding-with-cursor-ai-7-insider-tips-you-cant-miss", "to": "https://informalengineer.com/guides/cursor-ai-workflow", "status": 301, "note": "Refresh & migrate, retitled out of listicle-speak" },
+    { "from": "/productivity", "to": "https://meshrahman.com/essays?tag=systems", "status": 301, "note": "Pillar, mined & redirected" },
+    { "from": "/shipping", "to": "https://informalengineer.com/guides", "status": 301, "note": "Pillar. Tteck dedication moves to informalengineer.com/about, verbatim, permanent" },
+    { "from": "/philosophy", "to": "https://meshrahman.com/reading", "status": 301, "note": "Pillar, reading structure survives as /reading spine" },
+    { "from": "/book-notes", "to": "https://meshrahman.com/reading", "status": 301, "note": "Thin pages fold into /reading" },
+    { "from": "/atomic-habits", "to": "https://meshrahman.com/reading", "status": 301, "note": "Thin pages fold into /reading" },
+    { "from": "/newsletter", "to": "https://informalengineer.com/newsletter", "status": 301, "note": "Founder Design Handbook becomes Lab Notes" },
+    { "from": "/freelance", "status": 410, "note": "Retired on purpose (D6: consultancy out). 410 Gone is the correct, honest signal" }
+  ]
+}
