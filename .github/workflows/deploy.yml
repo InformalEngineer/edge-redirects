@@ -15,7 +15,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Deploy redirect worker (03-TRD §5: redirect changes are PR-reviewed like code)
+      - name: Deploy redirect worker (03-TRD §5, redirect changes are PR-reviewed like code)
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
