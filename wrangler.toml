@@ -1,6 +1,7 @@
 name = "meshaelr-redirects"
 main = "src/worker.js"
 compatibility_date = "2026-07-06"
+account_id = "d40a9acc7fa5b0bd9b53b5cd73f8f271"
 
 # Routes cover apex + www on meshaelr.com. The worker only intercepts traffic
 # that is proxied through Cloudflare; while DNS still points at the Ghost
